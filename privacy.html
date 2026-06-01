@@ -50,7 +50,7 @@
 <div class="hero">
     <div class="hero-inner">
         <h1>Privacy Policy</h1>
-        <div class="hero-meta">Last updated: April 2026 · Effective immediately · ABN: 49 472 962 479</div>
+        <div class="hero-meta">Last updated: May 2026 · Effective immediately · ABN: 49 472 962 479</div>
     </div>
 </div>
 
@@ -101,6 +101,7 @@
             <li>Display your content to other users according to your privacy settings</li>
             <li>Operate the feed, passport, map, and messaging features</li>
             <li>Send notifications you have opted into</li>
+            <li>Process and deliver video content via our video processing infrastructure</li>
             <li>Investigate and respond to reports of harmful content</li>
             <li>Improve and maintain the app</li>
             <li>Comply with legal obligations</li>
@@ -125,7 +126,8 @@
         <p>We do not sell your personal information. We share your information only in the following circumstances:</p>
         <ul>
             <li>With other users, according to your privacy settings (public posts are visible to all users; private account posts are visible only to approved followers)</li>
-            <li>With Google Firebase, which hosts our infrastructure (see Section 7)</li>
+            <li>With Google Firebase and Google Cloud, which host our database, authentication, and video processing infrastructure (see Section 7)</li>
+            <li>With Cloudflare, which stores your photos and videos via Cloudflare R2 (see Section 7)</li>
             <li>With law enforcement or regulators when required by law, court order, or to protect safety</li>
             <li>With the eSafety Commissioner when required under the Online Safety Act 2021 (Cth)</li>
             <li>In the event of a business transfer or acquisition, with the acquiring entity (you will be notified)</li>
@@ -135,9 +137,13 @@
 
     <div class="section">
         <h2>7. Overseas Data Storage</h2>
-        <p>Your data is stored on Google Firebase servers located in Iowa, United States (us-central1 region). By using Voyeza you consent to your personal data being stored and processed in the United States.</p>
-        <p>Google implements internationally recognised security standards including encryption in transit and at rest. Google LLC participates in the EU-US Data Privacy Framework.</p>
-        <div class="highlight">For Australian users: we are required under the Australian Privacy Principles to disclose overseas transfers. For EEA users: transfers to the United States are made under Standard Contractual Clauses (SCCs) as provided by Google's data processing agreements.</div>
+        <p>Your data is stored across two services:</p>
+        <ul>
+            <li><strong>Account data, posts and metadata</strong> — stored on Google Firebase servers in Iowa, United States (us-central1 region). Google LLC maintains internationally recognised security standards, including encryption in transit and at rest. Google LLC participates in the EU-US Data Privacy Framework.</li>
+            <li><strong>Photos and videos</strong> — stored on Cloudflare R2 object storage in the Oceania region. Cloudflare, Inc. maintains internationally recognised security standards, including encryption in transit and at rest.</li>
+        </ul>
+        <p style="margin-top:12px;">By using Voyeza you consent to your data being stored and processed in the United States and Oceania. Both Google and Cloudflare implement appropriate safeguards for your personal data.</p>
+        <div class="highlight">For Australian users: we are required under the Australian Privacy Principles to disclose overseas transfers. For EEA users: transfers to the United States are made under Standard Contractual Clauses (SCCs) as provided by Google's and Cloudflare's data processing agreements.</div>
     </div>
 
     <div class="section">
