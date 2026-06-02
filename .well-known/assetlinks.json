@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.voyeza.app",
+    "sha256_cert_fingerprints": ["97:3E:FC:A6:37:0D:B9:9D:7C:01:71:3D:C6:AF:31:DC:B7:73:D4:84:60:A4:F1:F9:74:C0:F0:43:37:96:E6:8D"]
+  }
+}]
