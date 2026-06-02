@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "details": [{
+      "appIDs": ["78ZYTR78VB.com.voyeza.app"],
+      "components": [
+        { "/": "/post/*" },
+        { "/": "/profile/*" }
+      ]
+    }]
+  }
+}
