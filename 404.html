@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyeza</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'DM Sans', sans-serif; background: #FAF8F4; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .card { background: #FFF; border-radius: 24px; padding: 48px 40px; max-width: 400px; width: 90%; text-align: center; box-shadow: 0 8px 40px rgba(0,0,0,0.08); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; color: #0D7377; margin-bottom: 8px; }
+        .tagline { font-size: 15px; color: #888; font-weight: 300; margin-bottom: 32px; }
+        .message { font-size: 16px; color: #444; margin-bottom: 32px; line-height: 1.6; }
+        .btn { display: block; padding: 16px 24px; border-radius: 100px; font-size: 15px; font-weight: 600; text-decoration: none; margin-bottom: 12px; transition: transform 0.2s; }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: #0D7377; color: #FFF; }
+        .btn-secondary { background: #F2F2F7; color: #0D7377; }
+        .divider { font-size: 13px; color: #CCC; margin: 20px 0; }
+    </style>
+    <script>
+        var isIOS     = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+        var isAndroid = /Android/i.test(navigator.userAgent);
+        var path      = window.location.pathname;
+
+        // On mobile, try to open the app first
+        if (isIOS || isAndroid) {
+            setTimeout(function() {
+                window.location.href = 'voyeza:/' + path;
+            }, 300);
+        }
+
+        // Hide the irrelevant store button
+        window.onload = function() {
+            if (isIOS) {
+                document.getElementById('android-btn').style.display = 'none';
+                document.getElementById('open-btn').style.display = 'block';
+            } else if (isAndroid) {
+                document.getElementById('ios-btn').style.display = 'none';
+                document.getElementById('open-btn').style.display = 'block';
+            }
+            // Desktop: both buttons visible, open-btn hidden
+        };
+    </script>
+</head>
+<body>
+    <div class="card">
+        <div class="logo">Voyeza</div>
+        <div class="tagline">Travel, shared.</div>
+        <div class="message">This link opens in the Voyeza app. Don't have it yet? Download it free.</div>
+
+        <a id="ios-btn" href="https://apps.apple.com/au/app/voyeza/id6762694054" class="btn btn-primary">
+            Download on App Store
+        </a>
+        <a id="android-btn" href="https://play.google.com/store/apps/details?id=com.voyeza.app" class="btn btn-primary">
+            Get it on Google Play
+        </a>
+
+        <div class="divider">already have the app?</div>
+
+        <a id="open-btn" href="voyeza:/" style="display:none;" class="btn btn-secondary">
+            Open Voyeza
+        </a>
+    </div>
+</body>
+</html>
