@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voyeza — Travel Social</title>
+    <meta name="description" content="Your passport is your profile. Every trip, every stamp, every memory. Download Voyeza on iOS and Android.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -18,41 +19,108 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 40px 24px;
+            padding: 60px 24px 80px;
         }
         .logo {
-            width: 88px;
-            height: 88px;
-            border-radius: 22px;
+            width: 96px;
+            height: 96px;
+            border-radius: 24px;
             margin-bottom: 28px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.2);
         }
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 52px;
+            font-size: 56px;
             font-weight: 900;
-            letter-spacing: -1px;
-            margin-bottom: 14px;
+            letter-spacing: -1.5px;
+            margin-bottom: 16px;
+            line-height: 1;
         }
-        p {
-            font-size: 18px;
-            color: rgba(255,255,255,0.7);
+        .tagline {
+            font-size: 19px;
+            color: rgba(255,255,255,0.72);
             font-weight: 300;
-            margin-bottom: 48px;
+            margin-bottom: 10px;
             line-height: 1.6;
             max-width: 380px;
         }
-        .badge {
+        .founding {
             display: inline-block;
-            background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.25);
+            background: rgba(212,175,55,0.2);
+            border: 1px solid rgba(212,175,55,0.45);
             border-radius: 100px;
-            padding: 10px 28px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 60px;
+            padding: 9px 22px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #D4AF37;
+            margin: 20px 0 32px;
+            letter-spacing: 0.3px;
+        }
+        .features {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 44px;
+            max-width: 480px;
+        }
+        .feature-pill {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 100px;
+            padding: 8px 16px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.88);
+            font-weight: 400;
+        }
+        .store-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+        }
+        .store-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 16px;
+            transition: transform 0.15s, box-shadow 0.15s;
+            min-width: 168px;
+        }
+        .store-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.2);
+        }
+        .store-btn-ios {
+            background: #1C1C1E;
+            color: #FFF;
+        }
+        .store-btn-android {
+            background: #FFF;
+            color: #0D7377;
+        }
+        .store-icon {
+            font-size: 30px;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .store-text { text-align: left; }
+        .store-text-small {
+            display: block;
+            font-size: 10px;
+            font-weight: 400;
+            opacity: 0.65;
+            letter-spacing: 0.3px;
+            margin-bottom: 2px;
+        }
+        .store-text-main {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
         }
         footer {
             position: fixed;
@@ -63,20 +131,52 @@
             justify-content: center;
         }
         footer a {
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.45);
             text-decoration: none;
             font-size: 13px;
             transition: color 0.2s;
         }
-        footer a:hover { color: #FFF; }
-        @media (max-width: 400px) { h1 { font-size: 38px; } }
+        footer a:hover { color: rgba(255,255,255,0.85); }
+        @media (max-width: 420px) {
+            h1 { font-size: 40px; }
+            .tagline { font-size: 16px; }
+            .store-buttons { flex-direction: column; align-items: center; }
+            .store-btn { width: 220px; justify-content: center; }
+        }
     </style>
 </head>
 <body>
     <img src="icon.png" alt="Voyeza" class="logo">
     <h1>Voyeza</h1>
-    
-    <div class="badge">Coming soon</div>
+    <p class="tagline">Your passport is your profile.<br>Every trip. Every stamp. Every memory.</p>
+
+    <div class="founding">✈ First 1,100 members get a Founding Member badge</div>
+
+    <div class="features">
+        <span class="feature-pill">🗺 World map of your travels</span>
+        <span class="feature-pill">🛂 Country passport stamps</span>
+        <span class="feature-pill">📸 Backdate your photos</span>
+        <span class="feature-pill">✈ Travel timeline</span>
+        <span class="feature-pill">💬 Travel community</span>
+    </div>
+
+    <div class="store-buttons">
+        <a class="store-btn store-btn-ios" href="https://apps.apple.com/us/app/voyeza/id6762694054" target="_blank" rel="noopener">
+            <span class="store-icon"></span>
+            <span class="store-text">
+                <span class="store-text-small">Download on the</span>
+                <span class="store-text-main">App Store</span>
+            </span>
+        </a>
+        <a class="store-btn store-btn-android" href="https://play.google.com/store/apps/details?id=com.voyeza.app" target="_blank" rel="noopener">
+            <span class="store-icon">▶</span>
+            <span class="store-text">
+                <span class="store-text-small">Get it on</span>
+                <span class="store-text-main">Google Play</span>
+            </span>
+        </a>
+    </div>
+
     <footer>
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/terms.html">Terms of Service</a>
