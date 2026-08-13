@@ -182,5 +182,20 @@
         <a href="/terms.html">Terms of Service</a>
         <a href="/support.html">Support</a>
     </footer>
+
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            if (params.get('ref') !== 'share') return; // normal visitor — show the full page
+            var ua = navigator.userAgent || "";
+            if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+              window.location.replace("https://apps.apple.com/us/app/voyeza/id6762694054");
+            } else if (/android/i.test(ua)) {
+              window.location.replace("https://play.google.com/store/apps/details?id=com.voyeza.app");
+            }
+            // desktop with ?ref=share: fall through, show the page
+          })();
+</script>
+    
 </body>
 </html>
