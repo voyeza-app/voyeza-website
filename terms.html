@@ -1,212 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service — Voyeza</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root { --teal: #0D7377; --teal-light: #14B8A6; --cream: #FAF8F4; --dark: #1C1C1E; --mid: #555; --light: #E8E8E8; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--dark); }
-        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; background: #FFF; border-bottom: 1px solid var(--light); }
-        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-        .nav-logo img { width: 34px; height: 34px; border-radius: 8px; }
-        .nav-logo span { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; color: var(--teal); }
-        .nav-back { color: var(--mid); text-decoration: none; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
-        .nav-back:hover { color: var(--teal); }
-        .hero { background: var(--dark); padding: 60px 40px; color: #FFF; }
-        .hero-inner { max-width: 760px; margin: 0 auto; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 12px; }
-        .hero-meta { font-size: 14px; color: rgba(255,255,255,0.5); }
-        .content { max-width: 760px; margin: 0 auto; padding: 60px 40px 100px; }
-        .section { background: #FFF; border-radius: 20px; padding: 32px; margin-bottom: 16px; border: 1px solid rgba(0,0,0,0.06); border-left: 4px solid var(--teal); }
-        .section h2 { font-size: 15px; font-weight: 700; color: var(--teal); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 16px; }
-        .section p { font-size: 15px; color: var(--mid); line-height: 1.8; font-weight: 300; margin-bottom: 12px; }
-        .section p:last-child { margin-bottom: 0; }
-        .section ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-        .section ul li { font-size: 15px; color: var(--mid); line-height: 1.7; font-weight: 300; padding-left: 16px; position: relative; }
-        .section ul li::before { content: '—'; position: absolute; left: 0; color: var(--teal); font-weight: 600; }
-        .highlight { background: rgba(13,115,119,0.06); border-radius: 12px; padding: 16px 20px; margin-top: 12px; font-size: 14px; color: var(--teal); font-weight: 500; line-height: 1.6; }
-        .warning { background: rgba(232,55,92,0.06); border-radius: 12px; padding: 16px 20px; margin-top: 12px; font-size: 14px; color: #c0392b; font-weight: 500; line-height: 1.6; }
-        .contact-box { background: var(--teal); color: #FFF; border-radius: 20px; padding: 32px; margin-top: 40px; text-align: center; }
-        .contact-box h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 12px; }
-        .contact-box p { color: rgba(255,255,255,0.75); font-size: 14px; margin-bottom: 20px; }
-        .contact-box a { display: inline-block; background: #FFF; color: var(--teal); text-decoration: none; padding: 12px 28px; border-radius: 100px; font-weight: 700; font-size: 14px; transition: all 0.2s; }
-        .contact-box a:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-        footer { background: var(--dark); padding: 32px 40px; text-align: center; color: rgba(255,255,255,0.35); font-size: 13px; }
-        footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
-        footer a:hover { color: var(--teal-light); }
-        @media (max-width: 600px) { nav { padding: 16px 20px; } .hero { padding: 48px 20px; } .hero h1 { font-size: 36px; } .content { padding: 40px 20px 80px; } .section { padding: 24px 20px; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Voyeza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0D7377;--teal-deep:#0a5c60;--teal-dark:#083f42;--gold:#B8912E;--gold-soft:#D4AF37;--ink:#1b1710;--paper:#FCFAF4;--cream:#F4EFE4;--mid:#5c554a;--line:#e7e0d2;--warn:#c0392b}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink)}
+a{color:inherit}.serif{font-family:'Fraunces',Georgia,serif}
+nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;
+  padding:16px clamp(20px,5vw,48px);background:rgba(252,250,244,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--gold-soft),var(--gold));display:grid;place-items:center;color:#1a0e04;font-size:16px;box-shadow:0 4px 12px rgba(212,175,55,.3)}
+.brand .name{font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--teal)}
+.nav-back{font-size:14px;font-weight:500;color:var(--mid);display:flex;gap:6px;align-items:center;transition:color .2s;text-decoration:none}
+.nav-back:hover{color:var(--teal)}
+.hero{position:relative;overflow:hidden;color:#fff;padding:clamp(56px,9vw,96px) clamp(20px,5vw,48px) clamp(46px,7vw,76px);
+  background:radial-gradient(700px 340px at 82% -20%,rgba(212,175,55,.28),transparent 60%),linear-gradient(150deg,#14100b,#1f1a10 60%,#0a5c60)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.3;pointer-events:none;
+  background-image:radial-gradient(circle at center,rgba(212,175,55,.3) 0 1px,transparent 1px);background-size:24px 24px;
+  -webkit-mask:radial-gradient(ellipse 70% 100% at 90% 0%,#000,transparent 70%);mask:radial-gradient(ellipse 70% 100% at 90% 0%,#000,transparent 70%)}
+.hero-in{max-width:820px;margin:0 auto;position:relative}
+.hero .kick{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:14px}
+.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(34px,6vw,54px);letter-spacing:-.02em;line-height:1;margin-bottom:14px}
+.hero .meta{font-size:13.5px;color:rgba(255,255,255,.6)}
+.content{max-width:820px;margin:0 auto;padding:clamp(44px,6vw,72px) clamp(20px,5vw,48px) 110px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px}
+.toc a{font-size:12.5px;color:var(--teal-deep);background:rgba(13,115,119,.07);border:1px solid rgba(13,115,119,.14);padding:6px 13px;border-radius:100px;text-decoration:none;transition:all .2s}
+.toc a:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
+.section{position:relative;background:#fff;border-radius:20px;padding:clamp(24px,3.2vw,34px);margin-bottom:16px;border:1px solid var(--line);box-shadow:0 1px 2px rgba(0,0,0,.02)}
+.section::before{content:"";position:absolute;left:0;top:22px;bottom:22px;width:3px;border-radius:3px;background:linear-gradient(var(--gold-soft),var(--teal))}
+.section h2{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--teal);margin-bottom:15px;display:flex;align-items:baseline;gap:12px}
+.section h2 .num{font-size:13px;color:var(--gold);font-weight:600;font-family:'DM Sans',sans-serif;letter-spacing:1px}
+.section p{font-size:15px;color:var(--mid);line-height:1.8;font-weight:300;margin-bottom:12px}
+.section p:last-child{margin-bottom:0}
+.section strong{color:var(--ink);font-weight:600}
+.section .lbl{font-weight:600;color:var(--ink);margin-top:14px;margin-bottom:6px;font-size:14px}
+.section ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin:4px 0}
+.section li{font-size:15px;color:var(--mid);line-height:1.65;font-weight:300;padding-left:20px;position:relative}
+.section li::before{content:"";position:absolute;left:2px;top:.68em;width:6px;height:6px;border-radius:50%;background:var(--gold-soft)}
+.section a{color:var(--teal-deep);text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(13,115,119,.3)}
+.note{background:linear-gradient(180deg,rgba(13,115,119,.055),rgba(13,115,119,.02));border:1px solid rgba(13,115,119,.14);border-radius:13px;padding:15px 18px;margin-top:14px;font-size:14px;color:var(--teal-deep);font-weight:500;line-height:1.65}
+.warning{background:linear-gradient(180deg,rgba(192,57,43,.06),rgba(192,57,43,.02));border:1px solid rgba(192,57,43,.2);border-radius:13px;padding:15px 18px;margin-top:14px;font-size:14px;color:var(--warn);font-weight:500;line-height:1.65}
+.contact-box{margin-top:36px;border-radius:22px;overflow:hidden;position:relative;color:#fff;text-align:center;padding:clamp(32px,5vw,48px);background:radial-gradient(500px 240px at 50% -30%,rgba(212,175,55,.22),transparent 60%),linear-gradient(150deg,#0f8388,#0a5c60);border:1px solid rgba(212,175,55,.3)}
+.contact-box h3{font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin-bottom:10px}
+.contact-box p{color:rgba(255,255,255,.78);font-size:14.5px;margin-bottom:22px;font-weight:300}
+.btn{display:inline-block;background:#fff;color:var(--teal);text-decoration:none;padding:12px 30px;border-radius:100px;font-weight:700;font-size:14px;transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.2)}
+footer{background:var(--teal-dark);color:rgba(255,255,255,.55);padding:34px clamp(20px,5vw,48px);text-align:center;font-size:13px}
+footer a{color:rgba(255,255,255,.7);text-decoration:none}footer a:hover{color:var(--gold-soft)}
+@media(max-width:600px){.section::before{display:none}}
+</style>
 </head>
 <body>
-
 <nav>
-    <a href="/" class="nav-logo"><img src="icon.png" alt="Voyeza"><span>Voyeza</span></a>
-    <a href="/" class="nav-back">← Back to Home</a>
+  <a class="brand" href="/"><span class="mark">✦</span><span class="name">Voyeza</span></a>
+  <a class="nav-back" href="/">← Back to home</a>
 </nav>
 
 <div class="hero">
-    <div class="hero-inner">
-        <h1>Terms of Service</h1>
-        <div class="hero-meta">Last updated: June 2026 · Effective immediately · ABN: 49 472 962 479</div>
-    </div>
+  <div class="hero-in">
+    <div class="kick">Legal</div>
+    <h1 class="serif">Terms of Service</h1>
+    <div class="meta">Last updated: September 2026 · Effective immediately · ABN 49 472 962 479</div>
+  </div>
 </div>
 
 <div class="content">
+  <div class="toc">
+    <a href="#s1">Acceptance</a><a href="#s2">Who can use</a><a href="#s3">Account</a><a href="#s4">Your content</a>
+    <a href="#s5">Prohibited</a><a href="#s6">Copyright</a><a href="#s7">Safety</a><a href="#s8">IP</a>
+    <a href="#s9">Third parties</a><a href="#s11">Termination</a><a href="#s12">Liability</a><a href="#s15">Contact</a>
+  </div>
 
-    <div class="section">
-        <h2>1. Acceptance</h2>
-        <p>By downloading, installing, or using Voyeza you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, do not use the app.</p>
-        <p>These Terms are governed by the laws of Victoria, Australia. Nothing in these Terms limits any rights you have under the consumer protection laws of your own country.</p>
-    </div>
+  <div class="section" id="s1"><h2 class="serif"><span class="num">01</span>Acceptance</h2>
+    <p>By downloading, installing, or using Voyeza you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, do not use the app.</p>
+    <p>These Terms are governed by the laws of Victoria, Australia. Nothing in these Terms limits any rights you have under the consumer protection laws of your own country.</p>
+  </div>
 
-    <div class="section">
-        <h2>2. Who Can Use Voyeza</h2>
-        <p>You must be at least <strong>16 years old</strong> to use Voyeza. This complies with the Online Safety Amendment (Social Media Minimum Age) Act 2024 (Cth).</p>
-        <p>By creating an account you confirm that:</p>
-        <ul>
-            <li>You are at least 16 years old</li>
-            <li>You are not prohibited from using social media services under any applicable law</li>
-            <li>You will provide accurate information when creating your account</li>
-            <li>You will maintain one account only — multiple accounts to evade bans are prohibited</li>
-        </ul>
-    </div>
+  <div class="section" id="s2"><h2 class="serif"><span class="num">02</span>Who can use Voyeza</h2>
+    <p>You must be at least <strong>16 years old</strong> to use Voyeza. This complies with the Online Safety Amendment (Social Media Minimum Age) Act 2024 (Cth).</p>
+    <p>By creating an account you confirm that:</p>
+    <ul>
+      <li>You are at least 16 years old</li>
+      <li>You are not prohibited from using social media services under any applicable law</li>
+      <li>You will provide accurate information when creating your account</li>
+      <li>You will maintain one account only — multiple accounts to evade bans are prohibited</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h2>3. Your Account</h2>
-        <p>You are responsible for keeping your account secure. Do not share your password. Notify us immediately at voyeza.app@gmail.com if you believe your account has been compromised.</p>
-        <p>You are responsible for all activity that occurs under your account.</p>
-    </div>
+  <div class="section" id="s3"><h2 class="serif"><span class="num">03</span>Your account</h2>
+    <p>You are responsible for keeping your account secure. Do not share your password. Notify us immediately at <a href="mailto:voyeza.app@gmail.com">voyeza.app@gmail.com</a> if you believe your account has been compromised.</p>
+    <p>You are responsible for all activity that occurs under your account.</p>
+  </div>
 
-    <div class="section">
-        <h2>4. Your Content</h2>
-        <p>You own the photos, videos, and captions you post to Voyeza.</p>
-        <p>By posting content you grant Voyeza a worldwide, non-exclusive, royalty-free, sublicensable licence to store, display, reproduce, and distribute your content within the app and in connection with operating and promoting the Voyeza service. This licence ends when you delete your content or your account.</p>
-        <p>You confirm that:</p>
-        <ul>
-            <li>You have the right to post any content you upload</li>
-            <li>Your content does not infringe any third party's intellectual property, privacy, or other rights</li>
-            <li>You have obtained any necessary consents from people who appear in your content</li>
-        </ul>
-        <p style="margin-top:12px;">You are solely responsible for your content and any consequences of posting it.</p>
-    </div>
+  <div class="section" id="s4"><h2 class="serif"><span class="num">04</span>Your content</h2>
+    <p>You own the photos, videos, and captions you post to Voyeza.</p>
+    <p>By posting content you grant Voyeza a worldwide, non-exclusive, royalty-free, sublicensable licence to store, display, reproduce, and distribute your content within the app and in connection with operating and promoting the Voyeza service. This licence ends when you delete your content or your account.</p>
+    <p>You confirm that:</p>
+    <ul>
+      <li>You have the right to post any content you upload</li>
+      <li>Your content does not infringe any third party's intellectual property, privacy, or other rights</li>
+      <li>You have obtained any necessary consents from people who appear in your content</li>
+    </ul>
+    <p style="margin-top:12px">You are solely responsible for your content and any consequences of posting it.</p>
+  </div>
 
-    <div class="section">
-        <h2>5. Prohibited Content and Behaviour</h2>
-        <p>The following is strictly prohibited on Voyeza:</p>
-        <p style="margin-top:12px;font-weight:500;color:var(--dark);">Content:</p>
-        <ul>
-            <li>Nudity or sexual content of any kind</li>
-            <li>Content that sexualises, exploits, or endangers minors in any way</li>
-            <li>Violent, graphic, or disturbing content</li>
-            <li>Content that glorifies or promotes self-harm or suicide</li>
-            <li>Hate speech based on race, religion, gender, sexual orientation, nationality, disability, or any other characteristic</li>
-            <li>Misinformation that is likely to cause serious harm</li>
-            <li>Spam or unsolicited commercial content</li>
-            <li>Content that violates any applicable law</li>
-        </ul>
-        <p style="margin-top:12px;font-weight:500;color:var(--dark);">Behaviour:</p>
-        <ul>
-            <li>Harassment, bullying, threats, or targeted abuse of any person</li>
-            <li>Image-based abuse (sharing intimate images without consent)</li>
-            <li>Impersonating another person or organisation</li>
-            <li>Creating fake accounts or manipulating engagement metrics</li>
-            <li>Automated scraping or extraction of data from the app</li>
-            <li>Attempting to hack, disrupt, or reverse engineer the platform</li>
-            <li>Using Voyeza to facilitate illegal activity</li>
-        </ul>
-        <div class="warning">Violations involving child safety or image-based abuse will result in permanent account termination and may be referred to Australian law enforcement and the eSafety Commissioner.</div>
-    </div>
+  <div class="section" id="s5"><h2 class="serif"><span class="num">05</span>Prohibited content &amp; behaviour</h2>
+    <p>The following is strictly prohibited on Voyeza:</p>
+    <div class="lbl">Content:</div>
+    <ul>
+      <li>Nudity or sexual content of any kind</li>
+      <li>Content that sexualises, exploits, or endangers minors in any way</li>
+      <li>Violent, graphic, or disturbing content</li>
+      <li>Content that glorifies or promotes self-harm or suicide</li>
+      <li>Hate speech based on race, religion, gender, sexual orientation, nationality, disability, or any other characteristic</li>
+      <li>Misinformation that is likely to cause serious harm</li>
+      <li>Spam or unsolicited commercial content</li>
+      <li>Content that violates any applicable law</li>
+    </ul>
+    <div class="lbl">Behaviour:</div>
+    <ul>
+      <li>Harassment, bullying, threats, or targeted abuse of any person</li>
+      <li>Image-based abuse (sharing intimate images without consent)</li>
+      <li>Impersonating another person or organisation</li>
+      <li>Creating fake accounts or manipulating engagement metrics</li>
+      <li>Automated scraping or extraction of data from the app</li>
+      <li>Attempting to hack, disrupt, or reverse engineer the platform</li>
+      <li>Using Voyeza to facilitate illegal activity</li>
+    </ul>
+    <div class="warning">Violations involving child safety or image-based abuse will result in permanent account termination and may be referred to Australian law enforcement and the eSafety Commissioner.</div>
+  </div>
 
-    <div class="section">
-        <h2>6. Copyright Complaints</h2>
-        <p>If you believe content on Voyeza infringes your copyright or other intellectual property rights, please contact us at voyeza.app@gmail.com with the subject line "Copyright Complaint". Include a description of the work you claim has been infringed, the location of the infringing content in the app, and your contact details. We will review and respond to valid complaints promptly.</p>
-    </div>
+  <div class="section" id="s6"><h2 class="serif"><span class="num">06</span>Copyright complaints</h2>
+    <p>If you believe content on Voyeza infringes your copyright or other intellectual property rights, please contact us at <a href="mailto:voyeza.app@gmail.com">voyeza.app@gmail.com</a> with the subject line "Copyright Complaint". Include a description of the work you claim has been infringed, the location of the infringing content in the app, and your contact details. We will review and respond to valid complaints promptly.</p>
+  </div>
 
-    <div class="section">
-        <h2>7. Online Safety</h2>
-        <p>Voyeza complies with the Online Safety Act 2021 (Cth) and the requirements of the eSafety Commissioner.</p>
-        <ul>
-            <li>Use the three-dot menu on any post, comment, or profile to report harmful content</li>
-            <li>We aim to review and act on valid removal requests as soon as practicable, generally within 24 hours</li>
-            <li>We will comply with notices from the eSafety Commissioner</li>
-            <li>Repeat violators will be permanently banned</li>
-        </ul>
-    </div>
+  <div class="section" id="s7"><h2 class="serif"><span class="num">07</span>Online safety</h2>
+    <p>Voyeza complies with the Online Safety Act 2021 (Cth) and the requirements of the eSafety Commissioner.</p>
+    <ul>
+      <li>Use the three-dot menu on any post, comment, or profile to report harmful content</li>
+      <li>We aim to review and act on valid removal requests as soon as practicable, generally within 24 hours</li>
+      <li>We will comply with notices from the eSafety Commissioner</li>
+      <li>Repeat violators will be permanently banned</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h2>8. Intellectual Property</h2>
-        <p>The Voyeza name, logo, app design, and original content are owned by Voyeza (ABN: 49 472 962 479) and are protected by intellectual property law.</p>
-        <p>You may not:</p>
-        <ul>
-            <li>Copy, modify, or distribute the app or any part of it</li>
-            <li>Use the Voyeza name or logo without written permission</li>
-            <li>Reverse engineer or attempt to extract source code from the app</li>
-        </ul>
-    </div>
+  <div class="section" id="s8"><h2 class="serif"><span class="num">08</span>Intellectual property</h2>
+    <p>The Voyeza name, logo, app design, and original content are owned by Voyeza (ABN 49 472 962 479) and are protected by intellectual property law.</p>
+    <p>You may not:</p>
+    <ul>
+      <li>Copy, modify, or distribute the app or any part of it</li>
+      <li>Use the Voyeza name or logo without written permission</li>
+      <li>Reverse engineer or attempt to extract source code from the app</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h2>9. Third Party Services</h2>
-        <p>Voyeza uses Google Firebase for data storage and authentication, Google Cloud for infrastructure and video processing, and Cloudflare R2 for media storage (photos and videos). Your use of Voyeza is also subject to Google's and Cloudflare's terms of service.</p>
-        <p>We are not responsible for the content or practices of any third party services linked from the app.</p>
-    </div>
+  <div class="section" id="s9"><h2 class="serif"><span class="num">09</span>Third-party services</h2>
+    <p>Voyeza uses Google Firebase for data storage and authentication, Google Cloud for infrastructure and video processing, and Cloudflare R2 for media storage (photos and videos). Your use of Voyeza is also subject to Google's and Cloudflare's terms of service.</p>
+    <p>We are not responsible for the content or practices of any third-party services linked from the app.</p>
+  </div>
 
-    <div class="section">
-        <h2>10. Availability</h2>
-        <p>We aim to keep Voyeza running reliably but we do not guarantee uninterrupted access. We may perform maintenance, introduce updates, or suspend the service temporarily without notice.</p>
-        <p>We may discontinue Voyeza permanently with reasonable notice where practicable.</p>
-    </div>
+  <div class="section" id="s10"><h2 class="serif"><span class="num">10</span>Availability</h2>
+    <p>We aim to keep Voyeza running reliably but we do not guarantee uninterrupted access. We may perform maintenance, introduce updates, or suspend the service temporarily without notice.</p>
+    <p>We may discontinue Voyeza permanently with reasonable notice where practicable.</p>
+  </div>
 
-    <div class="section">
-        <h2>11. Account Termination</h2>
-        <p>You may delete your account at any time via Settings → Account &amp; Privacy → Delete Account.</p>
-        <p>We may suspend or terminate accounts that violate these Terms. In serious cases — including child safety violations and image-based abuse — termination is immediate and permanent. Decisions involving child safety or image-based abuse are final.</p>
-        <p>Upon termination your data is deleted per our Privacy Policy.</p>
-    </div>
+  <div class="section" id="s11"><h2 class="serif"><span class="num">11</span>Account termination</h2>
+    <p>You may delete your account at any time via Settings → Account &amp; Privacy → Delete Account.</p>
+    <p>We may suspend or terminate accounts that violate these Terms. In serious cases — including child safety violations and image-based abuse — termination is immediate and permanent. Decisions involving child safety or image-based abuse are final.</p>
+    <p>Upon termination your data is deleted per our Privacy Policy.</p>
+  </div>
 
-    <div class="section">
-        <h2>12. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by applicable law:</p>
-        <ul>
-            <li>Voyeza is provided as-is without warranties of uninterrupted operation or fitness for a particular purpose</li>
-            <li>We are not liable for content posted by users of the platform</li>
-            <li>We are not liable for indirect, incidental, special, or consequential losses arising from your use of the app</li>
-            <li>Our total liability to you for any claim will not exceed the amount you have paid us in the 12 months preceding the claim</li>
-        </ul>
-        <div class="highlight">Nothing in these Terms excludes or limits any consumer rights you have under the Australian Consumer Law (ACL) or equivalent consumer protection laws in your jurisdiction that cannot be excluded by agreement.</div>
-    </div>
+  <div class="section" id="s12"><h2 class="serif"><span class="num">12</span>Limitation of liability</h2>
+    <p>To the maximum extent permitted by applicable law:</p>
+    <ul>
+      <li>Voyeza is provided as-is without warranties of uninterrupted operation or fitness for a particular purpose</li>
+      <li>We are not liable for content posted by users of the platform</li>
+      <li>We are not liable for indirect, incidental, special, or consequential losses arising from your use of the app</li>
+      <li>Our total liability to you for any claim will not exceed the amount you have paid us in the 12 months preceding the claim</li>
+    </ul>
+    <div class="note">Nothing in these Terms excludes or limits any consumer rights you have under the Australian Consumer Law (ACL) or equivalent consumer protection laws in your jurisdiction that cannot be excluded by agreement.</div>
+  </div>
 
-    <div class="section">
-        <h2>13. Governing Law and Disputes</h2>
-        <p>These Terms are governed by the laws of Victoria, Australia. We encourage you to contact us directly to resolve any dispute before pursuing formal proceedings. Nothing in this clause prevents you from relying on mandatory consumer protection laws in your own country.</p>
-    </div>
+  <div class="section" id="s13"><h2 class="serif"><span class="num">13</span>Governing law &amp; disputes</h2>
+    <p>These Terms are governed by the laws of Victoria, Australia. We encourage you to contact us directly to resolve any dispute before pursuing formal proceedings. Nothing in this clause prevents you from relying on mandatory consumer protection laws in your own country.</p>
+  </div>
 
-    <div class="section">
-        <h2>14. Changes to These Terms</h2>
-        <p>We may update these Terms from time to time. We will notify you of significant changes through the app. Continued use after changes are posted means you accept the updated Terms.</p>
-    </div>
+  <div class="section" id="s14"><h2 class="serif"><span class="num">14</span>Changes to these terms</h2>
+    <p>We may update these Terms from time to time. We will notify you of significant changes through the app. Continued use after changes are posted means you accept the updated Terms.</p>
+  </div>
 
-    <div class="section">
-        <h2>15. Contact</h2>
-        <p><strong>Email:</strong> <a href="mailto:voyeza.app@gmail.com">voyeza.app@gmail.com</a><br>
-        <strong>Business location:</strong> Melbourne, Victoria, Australia<br>
-        <strong>ABN:</strong> 49 472 962 479</p>
-    </div>
+  <div class="section" id="s15"><h2 class="serif"><span class="num">15</span>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:voyeza.app@gmail.com">voyeza.app@gmail.com</a><br>
+    <strong>Business location:</strong> Melbourne, Victoria, Australia<br>
+    <strong>ABN:</strong> 49 472 962 479</p>
+  </div>
 
-    <div class="contact-box">
-        <h3>Questions about these terms?</h3>
-        <p>We're happy to explain anything. Get in touch and we'll respond within 48 hours.</p>
-        <a href="mailto:voyeza.app@gmail.com">Contact Us</a>
-    </div>
-
+  <div class="contact-box">
+    <h3 class="serif">Questions about these terms?</h3>
+    <p>We're happy to explain anything. Get in touch and we'll respond within 48 hours.</p>
+    <a class="btn" href="mailto:voyeza.app@gmail.com">Contact us</a>
+  </div>
 </div>
 
-<footer>
-    <p>© 2026 Voyeza · ABN: 49 472 962 479 · <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms of Service</a> · <a href="/support.html">Support</a></p>
-</footer>
-
+<footer>© 2026 Voyeza · ABN 49 472 962 479 · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/support.html">Support</a></footer>
 </body>
 </html>
