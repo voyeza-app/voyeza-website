@@ -1,203 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voyeza — Travel Social</title>
-    <meta name="description" content="Your passport is your profile. Every trip, every stamp, every memory. Download Voyeza on iOS and Android.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: #0D7377;
-            color: #FFF;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 60px 24px 80px;
-        }
-        .logo {
-            width: 96px;
-            height: 96px;
-            border-radius: 24px;
-            margin-bottom: 28px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-        }
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 56px;
-            font-weight: 900;
-            letter-spacing: -1.5px;
-            margin-bottom: 16px;
-            line-height: 1;
-        }
-        .tagline {
-            font-size: 19px;
-            color: rgba(255,255,255,0.72);
-            font-weight: 300;
-            margin-bottom: 10px;
-            line-height: 1.6;
-            max-width: 380px;
-        }
-        .founding {
-            display: inline-block;
-            background: rgba(212,175,55,0.2);
-            border: 1px solid rgba(212,175,55,0.45);
-            border-radius: 100px;
-            padding: 9px 22px;
-            font-size: 13px;
-            font-weight: 500;
-            color: #D4AF37;
-            margin: 20px 0 32px;
-            letter-spacing: 0.3px;
-        }
-        .features {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 44px;
-            max-width: 480px;
-        }
-        .feature-pill {
-            background: rgba(255,255,255,0.12);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 100px;
-            padding: 8px 16px;
-            font-size: 13px;
-            color: rgba(255,255,255,0.88);
-            font-weight: 400;
-        }
-        .store-buttons {
-            display: flex;
-            gap: 14px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 56px;
-        }
-        .store-btn {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            padding: 14px 24px;
-            border-radius: 16px;
-            transition: transform 0.15s, box-shadow 0.15s;
-            min-width: 168px;
-        }
-        .store-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 28px rgba(0,0,0,0.2);
-        }
-        .store-btn-ios {
-            background: #1C1C1E;
-            color: #FFF;
-        }
-        .store-btn-android {
-            background: #FFF;
-            color: #0D7377;
-        }
-        .store-icon {
-            font-size: 30px;
-            line-height: 1;
-            flex-shrink: 0;
-        }
-        .store-text { text-align: left; }
-        .store-text-small {
-            display: block;
-            font-size: 10px;
-            font-weight: 400;
-            opacity: 0.65;
-            letter-spacing: 0.3px;
-            margin-bottom: 2px;
-        }
-        .store-text-main {
-            display: block;
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: -0.2px;
-        }
-        footer {
-            position: fixed;
-            bottom: 24px;
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        footer a {
-            color: rgba(255,255,255,0.45);
-            text-decoration: none;
-            font-size: 13px;
-            transition: color 0.2s;
-        }
-        footer a:hover { color: rgba(255,255,255,0.85); }
-        @media (max-width: 420px) {
-            h1 { font-size: 40px; }
-            .tagline { font-size: 16px; }
-            .store-buttons { flex-direction: column; align-items: center; }
-            .store-btn { width: 220px; justify-content: center; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voyeza — Your passport is your profile</title>
+<meta name="description" content="A social app for travelers. Track every country, collect passport stamps, fill your world map, and keep every trip. Download Voyeza on iOS and Android.">
+<meta property="og:title" content="Voyeza — Your passport is your profile">
+<meta property="og:description" content="Track every country, collect passport stamps, fill your world map, and keep every trip.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0D7377; --teal-deep:#0a5c60; --teal-dark:#083f42;
+  --gold:#D4AF37; --gold-soft:#E4C868; --gold-deep:#9A7413;
+  --ink:#14100B; --cream:#FAF6EE; --paper:#FCFAF4;
+  --crimson:#8B1538;
+  --mist:rgba(255,255,255,0.72);
+  --mist-dim:rgba(255,255,255,0.5);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{
+  font-family:'DM Sans',system-ui,sans-serif;
+  background:var(--teal-dark); color:#fff;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Fraunces',Georgia,serif}
+
+/* ---------- Ambient background ---------- */
+.bg{position:fixed;inset:0;z-index:-2;background:
+  radial-gradient(1200px 800px at 70% -10%, #128b90 0%, transparent 55%),
+  radial-gradient(1000px 700px at 0% 100%, #0a5c60 0%, transparent 50%),
+  linear-gradient(160deg,#0d7377 0%,#0a5c60 45%,#083f42 100%);}
+.grain{position:fixed;inset:0;z-index:-1;opacity:.5;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");}
+/* faint dotted globe grid behind hero */
+.globe-lines{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.25;
+  background-image:
+   radial-gradient(circle at center, rgba(212,175,55,.10) 0 1px, transparent 1px);
+  background-size:26px 26px;
+  -webkit-mask:radial-gradient(ellipse 60% 55% at 50% 32%, #000 0%, transparent 72%);
+          mask:radial-gradient(ellipse 60% 55% at 50% 32%, #000 0%, transparent 72%);}
+
+/* ---------- Nav ---------- */
+nav{position:absolute;top:0;left:0;right:0;z-index:20;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:26px clamp(20px,5vw,64px);}
+.brand{display:flex;align-items:center;gap:11px;font-weight:600}
+.brand .mark{width:36px;height:36px;border-radius:11px;
+  background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));
+  display:grid;place-items:center;color:#1a0e04;font-size:19px;
+  box-shadow:0 6px 20px rgba(212,175,55,.35), inset 0 1px 1px rgba(255,255,255,.5);}
+.brand .name{font-family:'Fraunces',serif;font-weight:600;font-size:22px;letter-spacing:.3px}
+.nav-links{display:flex;gap:30px;font-size:14px;color:var(--mist)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:#fff}
+@media(max-width:680px){.nav-links{display:none}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding:120px clamp(20px,5vw,40px) 90px;}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;
+  font-size:12px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--gold-soft);font-weight:600;margin-bottom:26px;
+  opacity:0;animation:rise .8s var(--ease) .1s forwards;}
+.eyebrow::before,.eyebrow::after{content:"";width:26px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-soft))}
+.eyebrow::after{background:linear-gradient(90deg,var(--gold-soft),transparent)}
+h1.hero-title{font-family:'Fraunces',serif;font-weight:600;
+  font-size:clamp(44px,8vw,92px);line-height:.98;letter-spacing:-.02em;
+  max-width:14ch;margin-bottom:22px;
+  opacity:0;animation:rise .9s var(--ease) .18s forwards;}
+h1.hero-title em{font-style:italic;color:var(--gold-soft)}
+.sub{font-size:clamp(16px,2.2vw,20px);color:var(--mist);font-weight:300;
+  max-width:52ch;line-height:1.65;margin-bottom:38px;
+  opacity:0;animation:rise .9s var(--ease) .3s forwards;}
+.founding-badge{display:inline-flex;align-items:center;gap:10px;
+  padding:10px 22px;border-radius:100px;margin-bottom:40px;
+  background:linear-gradient(180deg,rgba(212,175,55,.16),rgba(212,175,55,.06));
+  border:1px solid rgba(212,175,55,.4);color:var(--gold-soft);
+  font-size:13.5px;font-weight:500;letter-spacing:.2px;
+  box-shadow:0 0 0 4px rgba(212,175,55,.05), inset 0 1px 0 rgba(255,255,255,.15);
+  opacity:0;animation:rise .9s var(--ease) .4s forwards;}
+.founding-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold-soft);
+  box-shadow:0 0 10px var(--gold-soft);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+
+.stores{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;
+  opacity:0;animation:rise .9s var(--ease) .5s forwards;}
+.store{display:flex;align-items:center;gap:12px;padding:13px 24px;border-radius:15px;
+  min-width:186px;transition:transform .18s var(--ease),box-shadow .18s var(--ease);
+  border:1px solid transparent;}
+.store:hover{transform:translateY(-3px)}
+.store.ios{background:#0f0f10;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.08)}
+.store.ios:hover{box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.store.and{background:linear-gradient(180deg,#fff,#f3efe6);color:var(--teal-dark);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.store.and:hover{box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.store svg,.store .tri{flex-shrink:0}
+.store .tl{text-align:left;line-height:1.15}
+.store .tl small{display:block;font-size:10px;opacity:.6;letter-spacing:.4px;text-transform:uppercase}
+.store .tl b{font-size:16.5px;font-weight:700;letter-spacing:-.2px}
+
+.scrollcue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--mist-dim);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  opacity:0;animation:fade 1s ease 1s forwards}
+.scrollcue .line{width:1px;height:34px;background:linear-gradient(var(--gold-soft),transparent);animation:drop 2s ease-in-out infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* passport chip floating in hero */
+.passport-chip{position:absolute;pointer-events:none;border-radius:16px;
+  background:linear-gradient(150deg,#a11a42,#6b1029);
+  border:1px solid rgba(212,175,55,.4);
+  box-shadow:0 24px 60px rgba(0,0,0,.4);
+  display:grid;place-items:center;color:var(--gold-soft);
+  opacity:0;animation:rise 1.1s var(--ease) .7s forwards, float 7s ease-in-out 1.6s infinite;}
+.passport-chip .st{font-family:'Fraunces',serif;font-size:11px;letter-spacing:2px}
+.passport-chip.one{width:96px;height:120px;top:20%;left:9%;transform:rotate(-9deg)}
+.passport-chip.two{width:80px;height:100px;bottom:20%;right:10%;transform:rotate(8deg);animation-delay:.9s,2s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,-9deg))}50%{transform:translateY(-14px) rotate(var(--r,-9deg))}}
+.passport-chip.one{--r:-9deg}.passport-chip.two{--r:8deg}
+@media(max-width:900px){.passport-chip{display:none}}
+
+/* ---------- Section frame ---------- */
+section.band{position:relative;padding:clamp(72px,10vw,120px) clamp(20px,5vw,40px)}
+.wrap{max-width:1120px;margin:0 auto}
+.sec-head{text-align:center;max-width:640px;margin:0 auto clamp(44px,6vw,68px)}
+.sec-kicker{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:16px}
+.sec-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,4.6vw,48px);line-height:1.05;letter-spacing:-.02em;margin-bottom:16px}
+.sec-title em{font-style:italic;color:var(--gold-soft)}
+.sec-sub{color:var(--mist);font-weight:300;font-size:clamp(15px,2vw,17.5px);line-height:1.7}
+
+/* ---------- Feature cards ---------- */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.features{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.features{grid-template-columns:1fr}}
+.fcard{position:relative;padding:34px 30px;border-radius:22px;overflow:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+  transition:transform .3s var(--ease),border-color .3s,background .3s}
+.fcard:hover{transform:translateY(-5px);border-color:rgba(212,175,55,.4);
+  background:linear-gradient(180deg,rgba(212,175,55,.1),rgba(255,255,255,.03))}
+.fcard.wide{grid-column:span 2}
+@media(max-width:900px){.fcard.wide{grid-column:span 2}}
+@media(max-width:600px){.fcard.wide{grid-column:span 1}}
+.ficon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;
+  font-size:24px;margin-bottom:20px;
+  background:linear-gradient(150deg,rgba(212,175,55,.25),rgba(212,175,55,.08));
+  border:1px solid rgba(212,175,55,.3)}
+.fcard h3{font-family:'Fraunces',serif;font-weight:600;font-size:21px;margin-bottom:9px}
+.fcard p{color:var(--mist);font-weight:300;font-size:14.5px;line-height:1.65}
+.fcard .glow{position:absolute;width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(212,175,55,.16),transparent 70%);
+  top:-60px;right:-50px;opacity:0;transition:opacity .35s}
+.fcard:hover .glow{opacity:1}
+
+/* passport stat strip */
+.stripband{background:
+  linear-gradient(180deg,rgba(0,0,0,.14),transparent);}
+.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  border-radius:22px;overflow:hidden;border:1px solid rgba(212,175,55,.22);
+  background:rgba(212,175,55,.14)}
+@media(max-width:640px){.statgrid{grid-template-columns:1fr 1fr}}
+.stat{background:linear-gradient(180deg,rgba(10,60,64,.9),rgba(8,45,48,.9));
+  padding:32px 20px;text-align:center}
+.stat .n{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,5vw,42px);color:var(--gold-soft);line-height:1}
+.stat .l{margin-top:8px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);font-weight:500}
+
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:s}
+@media(max-width:800px){.steps{grid-template-columns:1fr}}
+.step{position:relative;padding:30px 26px 30px;border-radius:20px;
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.09)}
+.step::before{counter-increment:s;content:"0" counter(s);
+  font-family:'Fraunces',serif;font-size:44px;color:rgba(212,175,55,.35);
+  font-weight:600;display:block;margin-bottom:10px;line-height:1}
+.step h4{font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin-bottom:8px}
+.step p{color:var(--mist);font-weight:300;font-size:14px;line-height:1.6}
+
+/* CTA */
+.cta{text-align:center;position:relative;border-radius:30px;overflow:hidden;
+  padding:clamp(48px,7vw,80px) clamp(24px,5vw,60px);
+  background:
+    radial-gradient(600px 300px at 50% -20%, rgba(212,175,55,.2), transparent 60%),
+    linear-gradient(160deg,#0f8388,#0a5c60);
+  border:1px solid rgba(212,175,55,.3);
+  box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.cta h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,4.5vw,46px);line-height:1.05;margin-bottom:14px}
+.cta h2 em{font-style:italic;color:var(--gold-soft)}
+.cta p{color:var(--mist);font-weight:300;max-width:44ch;margin:0 auto 32px;line-height:1.65}
+
+/* footer */
+footer.site{padding:56px clamp(20px,5vw,64px) 44px;border-top:1px solid rgba(255,255,255,.09);
+  background:rgba(0,0,0,.18)}
+.foot-in{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+.foot-links{display:flex;gap:26px;flex-wrap:wrap;font-size:14px;color:var(--mist-dim)}
+.foot-links a{transition:color .2s}.foot-links a:hover{color:var(--gold-soft)}
+.foot-meta{font-size:12.5px;color:var(--mist-dim)}
+
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fade{to{opacity:1}}
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-    <img src="icon.png" alt="Voyeza" class="logo">
-    <h1>Voyeza</h1>
-    <p class="tagline">Your passport is your profile.<br>Every trip. Every stamp. Every memory.</p>
+<div class="bg"></div><div class="globe-lines"></div><div class="grain"></div>
 
-    <div class="founding">✈ First 1,000 members get a Founding Member badge</div>
+<nav>
+  <a class="brand" href="/"><span class="mark">✦</span><span class="name">Voyeza</span></a>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="/support.html">Support</a>
+    <a href="#get">Get the app</a>
+  </div>
+</nav>
 
+<header class="hero">
+  <div class="passport-chip one"><span class="st">✈<br>STAMP</span></div>
+  <div class="passport-chip two"><span class="st">◆</span></div>
+
+  <span class="eyebrow">A social app for travelers</span>
+  <h1 class="hero-title serif">Your passport is <em>your profile.</em></h1>
+  <p class="sub">Every country you visit becomes a stamp. Every trip fills your map. Collect your journeys into a passport worth keeping — and share the ones you're proud of.</p>
+  <div class="founding-badge"><span class="dot"></span>First 1,000 travelers get a Founding Member badge</div>
+  <div class="stores" id="get">
+    <a class="store ios" href="https://apps.apple.com/us/app/voyeza/id6762694054" target="_blank" rel="noopener" aria-label="Download on the App Store">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.13-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.29-1.27 3.15-2.53.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.73-1.05-2.76-4.16zM14.53 4.42c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45z"/></svg>
+      <span class="tl"><small>Download on the</small><b>App Store</b></span>
+    </a>
+    <a class="store and" href="https://play.google.com/store/apps/details?id=com.voyeza.app" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+      <svg class="tri" width="22" height="24" viewBox="0 0 24 24"><path fill="#0d7377" d="M3.6 2.2c-.3.2-.5.6-.5 1.1v17.4c0 .5.2.9.5 1.1l.1.1L13.4 12 3.7 2.1z"/><path fill="#0d7377" d="M17 15.3l-3.6-3.3 3.6-3.3 4.2 2.4c1.2.7 1.2 1.8 0 2.5z" opacity=".85"/><path fill="#0d7377" d="M13.4 12l3.6 3.3-9.4 5.4z" opacity=".7"/><path fill="#0d7377" d="M13.4 12L7.6 3.3l9.4 5.4z" opacity=".55"/></svg>
+      <span class="tl"><small>Get it on</small><b>Google Play</b></span>
+    </a>
+  </div>
+
+  <div class="scrollcue"><span>Explore</span><span class="line"></span></div>
+</header>
+
+<!-- FEATURES -->
+<section class="band" id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">What's inside</div>
+      <h2 class="sec-title serif">A travel journal that <em>collects itself.</em></h2>
+      <p class="sec-sub">Post your trips like any social app — Voyeza turns them into a living record of everywhere you've been.</p>
+    </div>
     <div class="features">
-        <span class="feature-pill">🗺 World map of your travels</span>
-        <span class="feature-pill">🛂 Country passport stamps</span>
-        <span class="feature-pill">📸 Backdate your photos</span>
-        <span class="feature-pill">✈ Travel timeline</span>
-        <span class="feature-pill">💬 Travel community</span>
+      <div class="fcard wide reveal"><span class="glow"></span>
+        <div class="ficon">🗺️</div>
+        <h3 class="serif">Your world map, filling in</h3>
+        <p>Every place you post colors in on your personal map. Watch continents light up as you go — a single glance at everywhere you've been.</p>
+      </div>
+      <div class="fcard reveal"><span class="glow"></span>
+        <div class="ficon">🛂</div>
+        <h3 class="serif">Passport stamps</h3>
+        <p>Each new country earns a hand-inked stamp in your digital passport. Collect them all.</p>
+      </div>
+      <div class="fcard reveal"><span class="glow"></span>
+        <div class="ficon">📸</div>
+        <h3 class="serif">Backdate old trips</h3>
+        <p>Been traveling for years? Add the old adventures too. Your timeline reflects when you actually went.</p>
+      </div>
+      <div class="fcard reveal"><span class="glow"></span>
+        <div class="ficon">🏅</div>
+        <h3 class="serif">Achievements</h3>
+        <p>Unlock badges as you explore — five continents, thirty countries, and beyond.</p>
+      </div>
+      <div class="fcard wide reveal"><span class="glow"></span>
+        <div class="ficon">💬</div>
+        <h3 class="serif">A community of travelers</h3>
+        <p>Posts, reels, trailshots and stories — all for travel. Follow other explorers, see their maps, and share the journeys you're proud of.</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="store-buttons">
-        <a class="store-btn store-btn-ios" href="https://apps.apple.com/us/app/voyeza/id6762694054" target="_blank" rel="noopener">
-            <span class="store-icon" style="display:flex;align-items:center;">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.13-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.29-1.27 3.15-2.53.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.73-1.05-2.76-4.16zM14.53 4.42c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45z"/></svg>
-</span>
-            <span class="store-text">
-                <span class="store-text-small">Download on the</span>
-                <span class="store-text-main">App Store</span>
-            </span>
-        </a>
-        <a class="store-btn store-btn-android" href="https://play.google.com/store/apps/details?id=com.voyeza.app" target="_blank" rel="noopener">
-            <span class="store-icon">▶</span>
-            <span class="store-text">
-                <span class="store-text-small">Get it on</span>
-                <span class="store-text-main">Google Play</span>
-            </span>
-        </a>
+<!-- STAT STRIP -->
+<section class="band stripband">
+  <div class="wrap reveal">
+    <div class="statgrid">
+      <div class="stat"><div class="n">195</div><div class="l">Countries to collect</div></div>
+      <div class="stat"><div class="n">∞</div><div class="l">Trips to remember</div></div>
+      <div class="stat"><div class="n">1,000</div><div class="l">Founding badges</div></div>
+      <div class="stat"><div class="n">$0</div><div class="l">Free to download</div></div>
     </div>
+  </div>
+</section>
 
-    <footer>
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms of Service</a>
-        <a href="/support.html">Support</a>
-    </footer>
+<!-- HOW -->
+<section class="band" id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">How it works</div>
+      <h2 class="sec-title serif">Three taps to your <em>first stamp.</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h4 class="serif">Post a moment</h4><p>Share a photo or video and tag where it was taken — today's trip or one from years ago.</p></div>
+      <div class="step reveal"><h4 class="serif">Earn the stamp</h4><p>Voyeza reads the location and inks a passport stamp for that country, automatically.</p></div>
+      <div class="step reveal"><h4 class="serif">Watch it grow</h4><p>Your map fills, your stats climb, and your passport becomes a record of your whole journey.</p></div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        (function () {
-            var params = new URLSearchParams(window.location.search);
-            if (params.get('ref') !== 'share') return; // normal visitor — show the full page
-            var ua = navigator.userAgent || "";
-            if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
-              window.location.replace("https://apps.apple.com/us/app/voyeza/id6762694054");
-            } else if (/android/i.test(ua)) {
-              window.location.replace("https://play.google.com/store/apps/details?id=com.voyeza.app");
-            }
-            // desktop with ?ref=share: fall through, show the page
-          })();
+<!-- CTA -->
+<section class="band">
+  <div class="wrap">
+    <div class="cta reveal">
+      <h2 class="serif">Start your <em>passport</em> today.</h2>
+      <p>Join as a Founding Member while the first 1,000 badges last. Free on iOS and Android.</p>
+      <div class="stores" style="justify-content:center">
+        <a class="store ios" href="https://apps.apple.com/us/app/voyeza/id6762694054" target="_blank" rel="noopener">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.13-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.29-1.27 3.15-2.53.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.73-1.05-2.76-4.16zM14.53 4.42c.72-.87 1.2-2.08 1.07-3.29-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45z"/></svg>
+          <span class="tl"><small>Download on the</small><b>App Store</b></span>
+        </a>
+        <a class="store and" href="https://play.google.com/store/apps/details?id=com.voyeza.app" target="_blank" rel="noopener">
+          <svg class="tri" width="22" height="24" viewBox="0 0 24 24"><path fill="#0d7377" d="M3.6 2.2c-.3.2-.5.6-.5 1.1v17.4c0 .5.2.9.5 1.1l.1.1L13.4 12 3.7 2.1z"/><path fill="#0d7377" d="M17 15.3l-3.6-3.3 3.6-3.3 4.2 2.4c1.2.7 1.2 1.8 0 2.5z" opacity=".85"/><path fill="#0d7377" d="M13.4 12l3.6 3.3-9.4 5.4z" opacity=".7"/><path fill="#0d7377" d="M13.4 12L7.6 3.3l9.4 5.4z" opacity=".55"/></svg>
+          <span class="tl"><small>Get it on</small><b>Google Play</b></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="foot-in">
+    <a class="brand" href="/"><span class="mark">✦</span><span class="name">Voyeza</span></a>
+    <div class="foot-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/support.html">Support</a>
+      <a href="mailto:voyeza.app@gmail.com">Contact</a>
+    </div>
+    <div class="foot-meta">© 2026 Voyeza · Melbourne, Australia · ABN 49 472 962 479</div>
+  </div>
+</footer>
+
+<script>
+/* store redirect for ?ref=share */
+(function(){
+  var p=new URLSearchParams(location.search);
+  if(p.get('ref')!=='share')return;
+  var ua=navigator.userAgent||'';
+  if(/iPad|iPhone|iPod/.test(ua)&&!window.MSStream)location.replace('https://apps.apple.com/us/app/voyeza/id6762694054');
+  else if(/android/i.test(ua))location.replace('https://play.google.com/store/apps/details?id=com.voyeza.app');
+})();
+/* scroll reveal */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 </script>
-    
 </body>
 </html>
